@@ -41,22 +41,7 @@ const PostPage = (props: any) => {
                 </div>
 
                 <article className="prose lg:prose-xl flex-container p-6">
-                    <Markdown
-                        options={{
-                            overrides: {
-                                h1: { component: 'h1', props: { className: '' } },
-                                h2: { component: 'h2', props: { className: '' } },
-                                h3: { component: 'h3', props: { className: 'font-bold' } },
-                                h4: { component: 'h4', props: { className: 'font-bold' } },
-                                h5: { component: 'h5', props: { className: 'font-bold' } },
-                                h6: { component: 'h6', props: { className: '' } },
-                                p: { component: 'p', props: { className: '' } },
-                                strong: { component: 'strong', props: { className: '' } },
-                                th: { component: 'th', props: { className: '' } },
-                                img: { component: 'img', props: { className: 'w-full h-100' } },
-                            },
-                        }}
-                    >
+                    <Markdown>
                         {post.content}
                     </Markdown>
                 </article>

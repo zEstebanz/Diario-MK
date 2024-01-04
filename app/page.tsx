@@ -1,7 +1,7 @@
 import getPostMetadata from "../components/getPostMetadata";
 import PostPreview from "../components/PostPreview";
 
-const Home = () => {
+const HomePage = () => {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post) => (
     <PostPreview key={post.slug} {...post} />
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
