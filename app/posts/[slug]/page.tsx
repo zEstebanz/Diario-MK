@@ -3,8 +3,8 @@ import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import Image from "next/image";
-import PostPreview from "@/components/PostPreview";
-import getPostMetadata from "@/components/getPostMetadata";
+import PostPreview from "../../../components/PostPreview";
+import getPostMetadata from "../../../components/getPostMetadata";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
