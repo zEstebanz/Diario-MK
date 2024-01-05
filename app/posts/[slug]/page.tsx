@@ -2,6 +2,7 @@ import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/getPostMetadata";
+import PostPreview from "../../../components/PostPreview";
 import Image from "next/image";
 
 const getPostContent = (slug: string) => {
@@ -22,6 +23,12 @@ export const generateStaticParams = async () => {
 const PostPage = (props: any) => {
     const slug = props.params.slug;
     const post = getPostContent(slug);
+
+    const postMetadata = getPostMetadata();
+    const postPreviews = postMetadata.map((post) => (
+        <PostPreview key={post.slug} {...post} />
+    ));
+
     return (
         <main className="flex flex-col md:flex-row pt-10">
             <div className="section-port h-auto min-h-screen md:w-3/4">
@@ -45,7 +52,21 @@ const PostPage = (props: any) => {
                 </article>
 
             </div>
+            {/* Sidebar */}
+            <aside className="w-full md:w-1/4 p-4 bg-gray-200 md:bg-transparent pt-8">
+                <div className="text-center">
+                    <h2 className="text-2xl font-bold">Otras Noticias</h2>
+                </div>
+                <div className='p-8'>
+                    <div className="container">
+                        <div className="grid grid-cols-1 lg:grid-cols-1">
+                            {postPreviews}
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </main>
+
 
     );
 };
