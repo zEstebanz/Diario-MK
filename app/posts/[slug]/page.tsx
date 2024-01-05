@@ -1,10 +1,8 @@
-import React from "react";
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
-import Image from "next/image";
-import PostPreview from "../../../components/PostPreview";
 import getPostMetadata from "../../../components/getPostMetadata";
+import Image from "next/image";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -14,20 +12,22 @@ const getPostContent = (slug: string) => {
     return matterResult;
 };
 
+export const generateStaticParams = async () => {
+    const posts = getPostMetadata();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
+};
+
 const PostPage = (props: any) => {
     const slug = props.params.slug;
     const post = getPostContent(slug);
-
-    const postMetadata = getPostMetadata();
-    const postPreviews = postMetadata.map((post) => (
-        <PostPreview key={post.slug} {...post} />
-    ));
-
     return (
         <main className="flex flex-col md:flex-row pt-10">
-            <section className="section-port h-auto min-h-screen md:w-3/4">
-                <div>
-                    <h1 className="text-center text-6xl pt-8 font-bold">{post.data.title}</h1>
+            <div className="section-port h-auto min-h-screen md:w-3/4">
+
+                <div className="pt-10">
+                    <h1 className="text-center text-6xl pt-10 font-bold">{post.data.title}</h1>
                     <p className="text-center font-bold">{post.data.date}</p>
                     <div className="flex justify-center items-center">
                         <Image
@@ -41,26 +41,12 @@ const PostPage = (props: any) => {
                 </div>
 
                 <article className="prose lg:prose-xl flex-container p-6">
-                    <Markdown>
-                        {post.content}
-                    </Markdown>
+                    <Markdown>{post.content}</Markdown>
                 </article>
-            </section>
 
-            {/* Sidebar */}
-            <aside className="w-full md:w-1/4 p-4 bg-gray-200 md:bg-transparent pt-8">
-                <div className="text-center">
-                    <h2 className="text-2xl font-bold">Otras Noticias</h2>
-                </div>
-                <div className='p-8'>
-                    <div className="container">
-                        <div className="grid grid-cols-1 lg:grid-cols-1">
-                            {postPreviews}
-                        </div>
-                    </div>
-                </div>
-            </aside>
+            </div>
         </main>
+
     );
 };
 
