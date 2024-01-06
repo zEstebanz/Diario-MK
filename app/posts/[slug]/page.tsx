@@ -40,8 +40,8 @@ const PostPage = (props: any) => {
                     <div className="flex justify-center items-center">
                         <Image
                             src={post.data.img}
-                            width={400}  // Ancho original (puedes ajustarlo según tus necesidades)
-                            height={400} // Altura original (puedes ajustarlo según tus necesidades)
+                            width={200}  // Ancho original (puedes ajustarlo según tus necesidades)
+                            height={200} // Altura original (puedes ajustarlo según tus necesidades)
                             alt="img"
                             className="imgMarkdown pt-6"
                         />
