@@ -1,105 +1,66 @@
-"use client";
-import Link from "next/link";
+"use client"
 import React, { useState } from "react";
-import NavLink from "./Navbarlink";
+import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
-import Image from "next/image";
 
 const navLinks = [
-    {
-        title: "Home",
-        path: "/",
-    },
-    {
-        title: "Articles",
-        path: "/",
-    },
+    { title: "About", path: "/about" },
+    { title: "Projects", path: "/projects" },
+    { title: "Articles", path: "/articles" },
+    { title: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     return (
-        <nav className="bg-gray-800 fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-nav">
-            <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-                <Link href="/">
-                    <div className="flex items-center cursor-pointer">
-                        <Image
-                            src='https://cdn.icon-icons.com/icons2/1603/PNG/512/news-newspaper-media-paper-press-article_108607.png'
-                            width={50}
-                            height={50}
-                            className="mr-2"
-                            alt="DiarioMK Logo"
-                        />
-                        <p className="text-3xl font-bold text-white">Diario-MK</p>
-                    </div>
+        <nav className="fixed top-0 left-0 right-0 z-10 mx-auto border border-[#33353F] bg-black">
+            <div className="container flex items-center justify-between py-2 mx-auto lg:py-4 px-4">
+                <Link href="/" className="text-2xl md:text-5xl text-white font-semibold">
+                    <h1 className="text-white">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">
+                            <span className="text-white">Logo</span>
+                        </span>
+                    </h1>
                 </Link>
 
                 <div className="mobile-menu block md:hidden">
-                    {!navbarOpen ? (
-                        <button
-                            onClick={() => setNavbarOpen(true)}
-                            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-                        >
-                            <Bars3Icon className="h-5 w-5" />
-                        </button>
-                    ) : (
-                        <button
-                            onClick={() => setNavbarOpen(false)}
-                            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-                        >
-                            <XMarkIcon className="h-5 w-5" />
-                        </button>
-                    )}
+                    <button
+                        onClick={() => setNavbarOpen(!navbarOpen)}
+                        className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+                    >
+                        {navbarOpen ? <XMarkIcon className="h-5 w-5" /> : <Bars3Icon className="h-5 w-5" />}
+                    </button>
                 </div>
-                <div className="menu hidden md:block md:w-auto" id="navbar">
-                    <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+
+                <div className={`menu hidden md:block md:w-auto ${navbarOpen ? "block" : "hidden"}`} id="navbar">
+                    <ul className="flex flex-col md:flex-row md:space-x-8 mt-0">
+                        <li>
+                            <Link href={"/"}>
+                                <p className="block py-2 px-4 text-[#ADB7BE] text-xl rounded hover:text-red-700">Home</p>
+                            </Link>
+                        </li>
+                        {/* Agregar más elementos del menú aquí */}
+                    </ul>
+                </div>
+            </div>
+
+            {/* Agregar menú desplegable aquí */}
+            {navbarOpen && (
+                <div className="md:hidden absolute top-16 left-0 w-full bg-black text-white">
+                    <ul className="flex flex-col items-center">
                         {navLinks.map((link, index) => (
                             <li key={index}>
-                                <NavLink href={link.path} title={link.title} />
+                                <Link href={link.path}>
+                                    <p className="block py-2 px-4 text-[#ADB7BE] text-xl hover:text-red-700">{link.title}</p>
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </div>
-            </div>
-            {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
-        </nav >
+            )}
+        </nav>
     );
 };
 
 export default Navbar;
-
-// import Link from 'next/link';
-// import Image from 'next/image';
-// const Nav = () => {
-//     return (
-//         <nav className="bg-gray-800 text-white p-2 fixed w-full top-0 z-10">
-//             <div className="relative max-w-7xl mx-auto">
-//                 <div className="flex items-center justify-between">
-//                     <Link href="/">
-//                         <div className="flex items-center cursor-pointer">
-//                             <Image
-//                                 src='https://cdn.icon-icons.com/icons2/1603/PNG/512/news-newspaper-media-paper-press-article_108607.png'
-//                                 width={50}
-//                                 height={50}
-//                                 className="mr-2"
-//                                 alt="DiarioMK Logo"
-//                             />
-//                             <p className="text-3xl font-bold">Diario-MK</p>
-//                         </div>
-//                     </Link>
-//                     {/* <ul className="flex space-x-4 pr-4">
-//                         <li>
-//                             <Link href="/">
-//                                 <p className="hover:text-gray-300">Home</p>
-//                             </Link>
-//                         </li>
-//                     </ul> */}
-//                 </div>
-//             </div>
-//         </nav>
-//     );
-// };
-
-// export default Nav;
