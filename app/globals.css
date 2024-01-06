@@ -8,13 +8,11 @@
 
 .imgMarkdown {
   width: 100%;
-  /* Hacer que la imagen ocupe el 100% del ancho del contenedor */
-  height: 250px;
-  /* Fijar una altura específica */
-  object-fit: contain;
+  height: 350px;
   /* Establecer el ajuste de la imagen */
-  border-radius: 10px;
-  /* Agregar bordes redondeados */
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 20px black;
 }
 
 .post-preview:hover {
@@ -24,4 +22,11 @@
 
 .post-preview:hover h2 {
   text-decoration: underline;
+}
+
+.mongo{
+  background-color: aqua;
+  color: black;
+  font-weight: 600;
+  
 }

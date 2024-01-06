@@ -36,12 +36,12 @@ const PostPage = (props: any) => {
                 <div className="pt-6">
                     <p className="text-center font-bold pt-10">{post.data.date}</p>
                     <h1 className="text-center text-6xl  font-bold">{post.data.title}</h1>
-                    <p className="text-center font-bold">{post.data.subtitle}</p>
+                    <p className="text-center font-bold">by {post.data.subtitle}</p>
                     <div className="flex justify-center items-center">
                         <Image
                             src={post.data.img}
-                            width={200}  // Ancho original (puedes ajustarlo según tus necesidades)
-                            height={200} // Altura original (puedes ajustarlo según tus necesidades)
+                            width={0}  // Ancho original (puedes ajustarlo según tus necesidades)
+                            height={0} // Altura original (puedes ajustarlo según tus necesidades)
                             alt="img"
                             className="imgMarkdown pt-6"
                         />
@@ -49,7 +49,20 @@ const PostPage = (props: any) => {
                 </div>
 
                 <article className="prose lg:prose-xl flex-container p-6">
-                    <Markdown>{post.content}</Markdown>
+                    <Markdown
+                        options={{
+                            overrides: {
+                                a: {
+                                    props: {
+                                        target: '_blank', // Establece el valor '_blank' para abrir en una nueva pestaña
+                                        rel: 'noopener noreferrer' // Se recomienda añadir estos valores para seguridad
+                                    },
+                                },
+                            },
+                        }}
+                    >
+                        {post.content}
+                    </Markdown>
                 </article>
 
             </div>
@@ -66,7 +79,7 @@ const PostPage = (props: any) => {
                     </div>
                 </div>
             </aside>
-        </main>
+        </main >
 
 
     );

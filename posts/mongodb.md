@@ -18,15 +18,27 @@ subtitle: "Esteban Oller"
 
 ## Interactuar con MongoDB
 
-- Abre otra terminal e inicia el shell de MongoDB con `mongo`.
+- Abre otra terminal e inicia el shell de MongoDB con:
+
+```
+ `mongo`.
+```
 
 ## Crear una Base de Datos
 
-- Crea una nueva base de datos con `use nombreDeLaBaseDeDatos`.
+- Crea una nueva base de datos con:
+
+```
+ `use nombreDeLaBaseDeDatos`.
+```
 
 ## Crear Colecciones
 
-- Crea una colección con `db.createCollection("nombreDeLaColeccion")`.
+- Crea una colección con:
+
+```
+ `db.createCollection("nombreDeLaColeccion")`.
+```
 
 ## Insertar Datos
 
@@ -74,3 +86,19 @@ db.miColeccion.deleteMany({ filtro: valorFiltro });
 ```
 
 Recuerda ajustar "miColeccion", "filtro", "valorFiltro", "campoAActualizar" y "nuevoValor" según tus necesidades.
+
+## Recursos adicionales:
+
+- [Documentación oficial de MongoDB](https://www.mongodb.com/docs/)
+
+### MongoDB Curso, Introducción Practica a NoSQL:
+
+<iframe width="100%" height="350" src="https://www.youtube.com/embed/lWMemPN9t6Q?si=UyFEk7riEIKmFFQT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+##Agradecimientos.
+
+Gracias al canal de Fazt y su aporte a la comunidad de desarolladores de software!
+
+###Youtube de [Fazt](https://www.youtube.com/@FaztTech)
