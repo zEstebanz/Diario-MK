@@ -33,7 +33,7 @@ const PostPage = (props: any) => {
         <main className="flex flex-col md:flex-row pt-10">
             <div className="section-port h-auto min-h-screen md:w-3/4">
 
-                <div className="pt-10">
+                <div className="pt-6">
                     <h1 className="text-center text-6xl pt-10 font-bold">{post.data.title}</h1>
                     <p className="text-center font-bold">{post.data.date}</p>
                     <div className="flex justify-center items-center">
@@ -53,7 +53,7 @@ const PostPage = (props: any) => {
 
             </div>
             {/* Sidebar */}
-            <aside className="w-full md:w-1/4 p-4 bg-gray-200 md:bg-transparent pt-8">
+            <aside className="w-full md:w-1/4 p-4 bg-gray-200 md:bg-transparent pt-14">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold">Otras Noticias</h2>
                 </div>
