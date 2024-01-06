@@ -22,7 +22,7 @@ const PostPreview = (props: PostMetadata) => {
         </div>
       </Link>
 
-      <p className="text-slate-700">{props.subtitle}</p>
+      <p className="text-slate-700">by {props.subtitle}</p>
     </div>
   );
 };

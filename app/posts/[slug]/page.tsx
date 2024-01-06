@@ -56,7 +56,7 @@ const PostPage = (props: any) => {
             {/* Sidebar */}
             <aside className="w-full md:w-1/4 p-4 bg-gray-200 md:bg-transparent pt-14">
                 <div className="text-center">
-                    <h2 className="text-2xl font-bold">Otras Noticias</h2>
+                    <h2 className="text-2xl font-bold">Más Posts</h2>
                 </div>
                 <div className='p-8'>
                     <div className="container">
