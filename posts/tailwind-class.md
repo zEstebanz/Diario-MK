@@ -2,6 +2,7 @@
 title: "Diccionario de Tailwind"
 date: "30-12-2023"
 img: "https://vabadus.es/images/cache/imagen_nodo/images/articulos/64b524021adc5990918944.png"
+subtitle: "Esteban Oller"
 ---
 
 # Introducción:

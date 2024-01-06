@@ -2,6 +2,7 @@
 title: "Formas de realizar Markdown"
 date: "29-12-2023"
 img: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*khBKbfBFOiEk5yS43LOE6A.png"
+subtitle: "Esteban Oller"
 ---
 
 #Titulos:

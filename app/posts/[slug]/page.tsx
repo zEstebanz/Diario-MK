@@ -34,15 +34,16 @@ const PostPage = (props: any) => {
             <div className="section-port h-auto min-h-screen md:w-3/4">
 
                 <div className="pt-6">
-                    <h1 className="text-center text-6xl pt-10 font-bold">{post.data.title}</h1>
-                    <p className="text-center font-bold">{post.data.date}</p>
+                    <p className="text-center font-bold pt-10">{post.data.date}</p>
+                    <h1 className="text-center text-6xl  font-bold">{post.data.title}</h1>
+                    <p className="text-center font-bold">{post.data.subtitle}</p>
                     <div className="flex justify-center items-center">
                         <Image
                             src={post.data.img}
-                            width={200}
-                            height={200}
+                            width={400}  // Ancho original (puedes ajustarlo según tus necesidades)
+                            height={400} // Altura original (puedes ajustarlo según tus necesidades)
                             alt="img"
-                            className="imgMarkdown"
+                            className="imgMarkdown pt-6"
                         />
                     </div>
                 </div>
