@@ -50,6 +50,11 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
+                        <li>
+                            <Link href={"https://dillinger.io/"} target="_blank">
+                                <p className="block py-2 px-4 text-[#ADB7BE] text-2xl rounded hover:text-blue-400 font-bold">DILLINGER</p>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -65,6 +70,12 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
+
+                        <li>
+                            <Link href={"https://dillinger.io/"} target="_blank">
+                                <p className="block py-2 px-4 text-[#ADB7BE] text-xl hover:text-blue-400 font-bold">DILLINGER</p>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             )}
