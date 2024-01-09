@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const navLinks = [
     { title: "Home", path: "/" },
+    { title: "Ejercicios", path: "/ejercicios"},
     { title: "About", path: "https://portafolio-esteban-oller-nextjs.vercel.app/" },
 ];
 
