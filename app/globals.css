@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .hidden {
   display: none;
 }
@@ -10,7 +10,8 @@
   width: 100%;
   height: 350px;
   /* Establecer el ajuste de la imagen */
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 20px;
   box-shadow: 20px black;
 }
@@ -24,9 +25,82 @@
   text-decoration: underline;
 }
 
-.mongo{
+.mongo {
   background-color: aqua;
   color: black;
   font-weight: 600;
-  
 }
+
+.has-line-data {
+  background-color: black;
+}
+
+.nav-bar {
+  background-color: rgba(0, 0, 0, 0.829);
+}
+.nav-bar .title-nav {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+}
+.nav-bar .text-nav-link {
+  color: white;
+}
+.nav-bar .text-nav-link:hover {
+  color: #147052;
+  transition: 0.5s;
+}
+.nav-bar .text-nav-link:not(:hover) {
+  color: white;
+  transition: 0.5s;
+}
+
+.port {
+  background-color: white;
+  height: 70vh;
+}
+.port .title-port {
+  color: black;
+  padding-top: 150px;
+  font-family: "Bebas Neue", sans-serif;
+}
+.port .subtitle {
+  margin: 10px 15%;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Bebas Neue", sans-serif;
+}
+.port .icon-down {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+}
+@media (max-width: 667px) {
+  .port .icon-down {
+    left: 50%;
+    top: 90%;
+  }
+}
+@media (max-width: 375) {
+  .port .icon-down {
+    left: 50%;
+    top: 60%;
+  }
+}
+.port .icon-down:hover {
+  color: #147052;
+  transition: 0.5s;
+}
+.port .icon-down:not(:hover) {
+  color: black;
+  transition: 0.5s;
+}
+
+/*Footer*/
+.text-footer-link {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/*End Footer*//*# sourceMappingURL=globals.css.map */
