@@ -16,15 +16,6 @@
   box-shadow: 20px black;
 }
 
-.post-preview:hover {
-  transition: transform 0.2s ease-in-out;
-  transform: scale(1.05);
-}
-
-.post-preview:hover h2 {
-  text-decoration: underline;
-}
-
 .mongo {
   background-color: aqua;
   color: black;
@@ -33,6 +24,11 @@
 
 .has-line-data {
   background-color: black;
+}
+
+/*Globales*/
+.currentColor {
+  background-color: white;
 }
 
 .nav-bar {
@@ -54,50 +50,87 @@
   transition: 0.5s;
 }
 
-.port {
+/*Section port*/
+.section-port {
   background-color: white;
-  height: 70vh;
+  padding-top: 100px;
 }
-.port .title-port {
-  color: black;
-  padding-top: 150px;
+.section-port .port {
+  background-color: white;
+  height: 80vh;
+  margin: 0 5%;
+}
+@media (max-width: 667px) {
+  .section-port .port {
+    height: 70vh;
+  }
+}
+.section-port .port .title-port {
+  color: #050505;
+  padding-top: 80px;
   font-family: "Bebas Neue", sans-serif;
 }
-.port .subtitle {
+.section-port .port .subtitle {
   margin: 10px 15%;
-  color: black;
+  color: #050505;
   text-align: center;
   font-weight: 600;
   font-family: "Bebas Neue", sans-serif;
 }
-.port .icon-down {
+.section-port .port hr {
+  margin-right: 0 25%;
+  border: 2px solid #050505;
+}
+.section-port .port .icon-down {
   position: absolute;
   left: 50%;
   top: 80%;
   transform: translate(-50%, -50%);
   justify-content: center;
 }
-@media (max-width: 667px) {
-  .port .icon-down {
-    left: 50%;
-    top: 90%;
-  }
-}
 @media (max-width: 375) {
-  .port .icon-down {
+  .section-port .port .icon-down {
     left: 50%;
     top: 60%;
   }
 }
-.port .icon-down:hover {
+.section-port .port .icon-down:hover {
   color: #147052;
   transition: 0.5s;
 }
-.port .icon-down:not(:hover) {
-  color: black;
+.section-port .port .icon-down:not(:hover) {
+  color: #050505;
   transition: 0.5s;
 }
 
+/*End Section port*/
+/*Section Blog*/
+.section-blog {
+  background-color: white;
+}
+.section-blog .post-preview:hover {
+  transition: transform 0.4s ease-in-out;
+  transform: scale(1.05);
+}
+.section-blog .post-preview:hover h2 {
+  text-decoration: underline;
+}
+.section-blog .post-preview:not(:hover) {
+  transition: transform 0.2s ease-in-out;
+  transition: 0.5s;
+}
+
+/*EndSection Blog*/
+/*Section Post*/
+.section-posts {
+  padding-top: 50px;
+}
+.section-posts .sidebar {
+  padding-top: 50px;
+  background-color: white;
+}
+
+/*End Section Post*/
 /*Footer*/
 .text-footer-link {
   font-family: "Bebas Neue", sans-serif;

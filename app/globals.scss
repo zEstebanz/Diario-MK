@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 $awita: #147052;
+$black: #050505;
+$gris-claro: #3c3c3b;
+$blanco-diario: #ebebd3;
+
 $font-diario: 'Bebas Neue', sans-serif;
 
 .hidden {
@@ -19,15 +23,6 @@ $font-diario: 'Bebas Neue', sans-serif;
   box-shadow: 20px black;
 }
 
-.post-preview:hover {
-  transition: transform 0.2s ease-in-out;
-  transform: scale(1.05);
-}
-
-.post-preview:hover h2 {
-  text-decoration: underline;
-}
-
 .mongo {
   background-color: aqua;
   color: black;
@@ -37,6 +32,11 @@ $font-diario: 'Bebas Neue', sans-serif;
 
 .has-line-data {
   background-color: black;
+}
+
+/*Globales*/
+.currentColor {
+  background-color: white;
 }
 
 .nav-bar {
@@ -62,53 +62,99 @@ $font-diario: 'Bebas Neue', sans-serif;
   }
 }
 
-
-.port {
+/*Section port*/
+.section-port {
   background-color: white;
-  height: 70vh;
+  padding-top: 100px;
 
-  .title-port {
-    color: black;
-    padding-top: 150px;
-    font-family: 'Bebas Neue', sans-serif;
-  }
-
-  .subtitle {
-    margin: 10px 15%;
-    color: black;
-    text-align: center;
-    font-weight: 600;
-    font-family: 'Bebas Neue', sans-serif;
-  }
-
-  .icon-down {
-    position: absolute;
-    left: 50%;
-    top: 80%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
+  .port {
+    background-color: white;
+    height: 80vh;
+    margin: 0 5%;
 
     @media (max-width: 667px) {
-      left: 50%;
-      top: 90%;
+      height: 70vh;
     }
 
-    @media (max-width: 375) {
+    .title-port {
+      color: $black;
+      padding-top: 80px;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    .subtitle {
+      margin: 10px 15%;
+      color: $black;
+      text-align: center;
+      font-weight: 600;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    hr {
+      margin-right: 0 25%;
+      border: 2px solid $black;
+    }
+
+    .icon-down {
+      position: absolute;
       left: 50%;
-      top: 60%;
+      top: 80%;
+      transform: translate(-50%, -50%);
+      justify-content: center;
+
+      @media (max-width: 375) {
+        left: 50%;
+        top: 60%;
+      }
+    }
+
+    .icon-down:hover {
+      color: $awita;
+      transition: 0.5s;
+    }
+
+    .icon-down:not(:hover) {
+      color: $black;
+      transition: 0.5s;
     }
   }
 
-  .icon-down:hover {
-    color: $awita;
-    transition: 0.5s;
+}
+
+/*End Section port*/
+
+/*Section Blog*/
+.section-blog {
+  background-color: white;
+
+  .post-preview:hover {
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.05);
   }
 
-  .icon-down:not(:hover) {
-    color: black;
+  .post-preview:hover h2 {
+    text-decoration: underline;
+  }
+
+  .post-preview:not(:hover) {
+    transition: transform 0.2s ease-in-out;
     transition: 0.5s;
   }
 }
+
+/*EndSection Blog*/
+
+/*Section Post*/
+.section-posts {
+  padding-top: 50px;
+
+  .sidebar{
+    padding-top: 50px;
+    background-color: white;
+  }
+}
+
+/*End Section Post*/
 
 /*Footer*/
 .text-footer-link {

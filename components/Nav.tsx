@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-10 mx-auto border border-[#33353F] nav-bar">
             <div className="container flex items-center justify-between py-2 mx-auto lg:py-4 px-4">
-                <Link href="/" className="text-lg md:text-3xl text-white font-semibold">
+                <Link href="/" className="text-3xl md:text-3xl text-white font-semibold">
                     <div className="flex items-center cursor-pointer">
                         <h1 className="text-white">
                             <span className="title-nav text-nav-link">Diario-MK</span>

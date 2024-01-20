@@ -30,8 +30,8 @@ const PostPage = (props: any) => {
     ));
 
     return (
-        <main className="flex flex-col md:flex-row pt-10">
-            <div className="section-port h-auto min-h-screen md:w-3/4">
+        <main className="section-posts flex flex-col md:flex-row">
+            <div className="h-auto min-h-screen md:w-3/4">
 
                 <div className="pt-6">
                     <p className="text-center font-bold pt-10">{post.data.date}</p>
@@ -67,7 +67,7 @@ const PostPage = (props: any) => {
 
             </div>
             {/* Sidebar */}
-            <aside className="w-full md:w-1/4 p-4 bg-gray-200 md:bg-transparent pt-14">
+            <aside className="w-full md:w-1/4 p-4 bg-gray-200 md:bg-transparent sidebar">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold">Más Posts</h2>
                 </div>
