@@ -1,7 +1,10 @@
 import getPostMetadata from "../components/getPostMetadata";
 import PostPreview from "../components/PostPreview";
-import { FaAngleDoubleDown } from "react-icons/fa";
+import { FaAngleDoubleDown, FaSkull} from "react-icons/fa";
 import Link from "next/link";
+import { FaReact } from "react-icons/fa";
+import { BsFillPersonFill} from "react-icons/bs";
+import { FaBookSkull } from "react-icons/fa6";
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();
@@ -12,11 +15,32 @@ const HomePage = () => {
   return (
     <>
       <section className="section-port h-auto min-h-screen">
-        <div className="port">
-          <h1 className="title-port font-bold text-6xl md:text-8xl p-5">Diario-MK</h1>
-          <hr />
-          <p className="subtitle text-xl md:text-2xl">¡Bienvenidos a mi blog personal! Este espacio está dedicado a compartir artículos de mi interes.</p>
-          <Link href={"#blog"}><FaAngleDoubleDown className="icon-down text-4xl md:text-6xl" /></Link>
+        <div className="port relative">
+          <div>
+            <h1 className="title-port font-bold text-6xl md:text-8xl p-5">Diario-MK</h1>
+            <hr />
+            <p className="subtitle text-xl md:text-2xl">¡Bienvenidos a mi blog personal! Este espacio está dedicado a compartir artículos de mi interés.</p>
+            <Link href={"#blog"}>
+              <p><FaAngleDoubleDown className="icon-down text-4xl md:text-6xl" /></p>
+            </Link>
+          </div>
+          <div className="flex items-center absolute top-0 right-0">
+            <Link href="/ruta-del-icono-1">
+              <p className="mr-4">
+                <FaReact className="text-3xl md:text-4xl" />
+              </p>
+            </Link>
+            <Link href="/ruta-del-icono-2">
+              <p className="mr-4">
+                <BsFillPersonFill className="text-3xl md:text-4xl" />
+              </p>
+            </Link>
+            <Link href="/newshack">
+              <p>
+                <FaBookSkull  className="text-3xl md:text-4xl" />
+              </p>
+            </Link>
+          </div>
         </div>
       </section>
 

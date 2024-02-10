@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/newshack/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
