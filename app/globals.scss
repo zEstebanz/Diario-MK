@@ -125,7 +125,9 @@ $font-diario: 'Bebas Neue', sans-serif;
 
 /*Section Blog*/
 .section-blog {
+
   background-color: white;
+  padding-top: 80px;
 
   .post-preview:hover {
     transition: transform 0.4s ease-in-out;
