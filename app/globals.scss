@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-$awita: #147052;
+$awita: #145e70;
 $black: #050505;
 $gris-claro: #3c3c3b;
 $blanco-diario: #ebebd3;
@@ -110,13 +110,23 @@ $font-diario: 'Bebas Neue', sans-serif;
 
     .icon-down:hover {
       color: $awita;
-      transition: 0.5s;
+      transition: 0.5s; 
     }
 
     .icon-down:not(:hover) {
       color: $black;
       transition: 0.5s;
     }
+  }
+
+  .icon-port:hover {
+    color: $awita;
+    transition: 0.5s;
+    transform: scale(1.5);
+  }
+
+  .icon-port:not(:hover) {
+    transition: 0.5s;
   }
 
 }
@@ -150,7 +160,7 @@ $font-diario: 'Bebas Neue', sans-serif;
 .section-posts {
   padding-top: 50px;
 
-  .sidebar{
+  .sidebar {
     padding-top: 50px;
     background-color: white;
   }
@@ -158,9 +168,10 @@ $font-diario: 'Bebas Neue', sans-serif;
 
 /*End Section Post*/
 
-.section-newshack{
+.section-newshack {
   background-color: #147052;
 }
+
 /*Footer*/
 .text-footer-link {
   font-family: $font-diario;

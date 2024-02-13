@@ -1,10 +1,10 @@
 import getPostMetadata from "../components/getPostMetadata";
 import PostPreview from "../components/PostPreview";
-import { FaAngleDoubleDown, FaSkull} from "react-icons/fa";
+import { FaAngleDoubleDown} from "react-icons/fa";
 import Link from "next/link";
-import { FaReact } from "react-icons/fa";
-import { BsFillPersonFill} from "react-icons/bs";
+import { IoSkullOutline } from "react-icons/io5";
 import { FaBookSkull } from "react-icons/fa6";
+import { SiExercism } from "react-icons/si";
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();
@@ -25,19 +25,14 @@ const HomePage = () => {
             </Link>
           </div>
           <div className="flex items-center absolute top-0 right-0">
-            <Link href="/ruta-del-icono-1">
+            <Link className="icon-port" href="/ejercicios">
               <p className="mr-4">
-                <FaReact className="text-3xl md:text-4xl" />
+                <SiExercism className="text-6xl md:text-8xl" />
               </p>
             </Link>
-            <Link href="/ruta-del-icono-2">
-              <p className="mr-4">
-                <BsFillPersonFill className="text-3xl md:text-4xl" />
-              </p>
-            </Link>
-            <Link href="/newshack">
+            <Link className="icon-port" href="/newshack">
               <p>
-                <FaBookSkull  className="text-3xl md:text-4xl" />
+                <IoSkullOutline className="text-6xl md:text-8xl" />
               </p>
             </Link>
           </div>

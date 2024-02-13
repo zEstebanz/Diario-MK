@@ -5,6 +5,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const navLinks = [
     { title: "Home", path: "/" },
+    { title: "Ejercicios", path: "/ejercicios" },
+    { title: "NewsHack", path: "/newshack" },
+
 ];
 
 const Navbar = () => {
