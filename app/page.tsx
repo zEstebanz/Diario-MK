@@ -3,7 +3,7 @@ import PostPreview from "../components/PostPreview";
 import { FaAngleDoubleDown} from "react-icons/fa";
 import Link from "next/link";
 import { IoSkullOutline } from "react-icons/io5";
-import { FaBookSkull } from "react-icons/fa6";
+import { BiWorld } from "react-icons/bi";
 import { SiExercism } from "react-icons/si";
 
 const HomePage = () => {

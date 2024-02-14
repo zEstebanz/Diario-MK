@@ -168,9 +168,19 @@ $font-diario: 'Bebas Neue', sans-serif;
 
 /*End Section Post*/
 
+/* Section NewsHack*/
 .section-newshack {
-  background-color: #147052;
+  background-color: #000000;
+  .port{
+    background-image: url("https://raw.githubusercontent.com/owerdogan/wallpapers-for-kali/main/kali-cyan/cyan-kali-contours-16x9.png");
+    height: 150px;
+
+    .title{
+      font-family: $font-diario;
+    }
+  }
 }
+/* End Section NewsHack*/
 
 /*Footer*/
 .text-footer-link {

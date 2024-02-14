@@ -62,7 +62,7 @@ const Ejercicios = [
 function page() {
     return (
         <section className="section-port h-auto min-h-screen pt-16 bg-gray-100">
-            <h1 className="text-center font-bold text-4xl md:text-6xl pt-10 text-black">Ejercicios de Lógica</h1>
+            <h1 className="text-center font-bold text-4xl md:text-6xl text-white bg-black ">Ejercicios de Lógica</h1>
             <div className='p-4 md:p-8'>
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 p-4">
