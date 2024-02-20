@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @tailwind base;
 @tailwind components;
@@ -52,11 +53,14 @@
 
 /*Section port*/
 .section-port {
-  background-color: white;
+  background-image: radial-gradient(circle at 20% 50%, #145E70, transparent 60%), radial-gradient(circle at 80% 20%, #38b388, transparent 60%), linear-gradient(45deg, #ffffff, #178a71);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
   padding-top: 100px;
+  background-size: cover;
 }
 .section-port .port {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.76);
   height: 80vh;
   margin: 0 5%;
 }
@@ -66,14 +70,14 @@
   }
 }
 .section-port .port .title-port {
-  color: #050505;
-  padding-top: 80px;
+  color: white;
+  padding-top: 100px;
+  padding-left: 5%;
   font-family: "Bebas Neue", sans-serif;
 }
 .section-port .port .subtitle {
-  margin: 10px 15%;
-  color: #050505;
-  text-align: center;
+  color: white;
+  padding-left: 5%;
   font-weight: 600;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -99,7 +103,7 @@
   transition: 0.5s;
 }
 .section-port .port .icon-down:not(:hover) {
-  color: #050505;
+  color: white;
   transition: 0.5s;
 }
 .section-port .icon-port:hover {
@@ -114,8 +118,12 @@
 /*End Section port*/
 /*Section Blog*/
 .section-blog {
-  background-color: white;
   padding-top: 80px;
+  background-image: radial-gradient(circle at 20% 50%, #145E70, transparent 60%), radial-gradient(circle at 80% 20%, #38b388, transparent 60%), linear-gradient(45deg, #ffffff, #178a71);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
+  padding-top: 100px;
+  background-size: cover;
 }
 .section-blog .post-preview:hover {
   transition: transform 0.4s ease-in-out;
@@ -158,4 +166,14 @@
   font-family: "Bebas Neue", sans-serif;
 }
 
-/*End Footer*//*# sourceMappingURL=globals.css.map */
+/*End Footer*/
+.absolute-menu {
+  z-index: 10;
+  /* Ajusta este valor según sea necesario para asegurarte de que el menú desplegable esté por encima de otros elementos */
+}
+
+.article-box .img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=globals.css.map */

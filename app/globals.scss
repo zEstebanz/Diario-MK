@@ -7,6 +7,8 @@ $awita: #145e70;
 $black: #050505;
 $gris-claro: #3c3c3b;
 $blanco-diario: #ebebd3;
+$gris: #AEAEAE;
+$imgBack: "https://r4.wallpaperflare.com/wallpaper/194/141/160/digital-art-minimalism-simple-background-trees-wallpaper-0900585d219a5d9b3677584ff0d126ad.jpg";
 
 $font-diario: 'Bebas Neue', sans-serif;
 
@@ -64,11 +66,17 @@ $font-diario: 'Bebas Neue', sans-serif;
 
 /*Section port*/
 .section-port {
-  background-color: white;
+  background-image:
+    radial-gradient(circle at 20% 50%, #145E70, transparent 60%),
+    radial-gradient(circle at 80% 20%, #38b388, transparent 60%),
+    linear-gradient(45deg, #ffffff, #178a71);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
   padding-top: 100px;
+  background-size: cover;
 
   .port {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.76);
     height: 80vh;
     margin: 0 5%;
 
@@ -77,15 +85,15 @@ $font-diario: 'Bebas Neue', sans-serif;
     }
 
     .title-port {
-      color: $black;
-      padding-top: 80px;
+      color: white;
+      padding-top: 100px;
+      padding-left: 5%;
       font-family: 'Bebas Neue', sans-serif;
     }
 
     .subtitle {
-      margin: 10px 15%;
-      color: $black;
-      text-align: center;
+      color: white;
+      padding-left: 5%;
       font-weight: 600;
       font-family: 'Bebas Neue', sans-serif;
     }
@@ -110,11 +118,11 @@ $font-diario: 'Bebas Neue', sans-serif;
 
     .icon-down:hover {
       color: $awita;
-      transition: 0.5s; 
+      transition: 0.5s;
     }
 
     .icon-down:not(:hover) {
-      color: $black;
+      color: white;
       transition: 0.5s;
     }
   }
@@ -135,9 +143,15 @@ $font-diario: 'Bebas Neue', sans-serif;
 
 /*Section Blog*/
 .section-blog {
-
-  background-color: white;
   padding-top: 80px;
+  background-image:
+    radial-gradient(circle at 20% 50%, #145E70, transparent 60%),
+    radial-gradient(circle at 80% 20%, #38b388, transparent 60%),
+    linear-gradient(45deg, #ffffff, #178a71);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
+  padding-top: 100px;
+  background-size: cover;
 
   .post-preview:hover {
     transition: transform 0.4s ease-in-out;
@@ -152,6 +166,7 @@ $font-diario: 'Bebas Neue', sans-serif;
     transition: transform 0.2s ease-in-out;
     transition: 0.5s;
   }
+
 }
 
 /*EndSection Blog*/
@@ -171,15 +186,17 @@ $font-diario: 'Bebas Neue', sans-serif;
 /* Section NewsHack*/
 .section-newshack {
   background-color: #000000;
-  .port{
+
+  .port {
     background-image: url("https://raw.githubusercontent.com/owerdogan/wallpapers-for-kali/main/kali-cyan/cyan-kali-contours-16x9.png");
     height: 150px;
 
-    .title{
+    .title {
       font-family: $font-diario;
     }
   }
 }
+
 /* End Section NewsHack*/
 
 /*Footer*/
@@ -188,3 +205,14 @@ $font-diario: 'Bebas Neue', sans-serif;
 }
 
 /*End Footer*/
+
+.absolute-menu {
+  z-index: 10;
+  /* Ajusta este valor según sea necesario para asegurarte de que el menú desplegable esté por encima de otros elementos */
+}
+
+.article-box {
+  .img {
+    user-select: none;
+  }
+}
