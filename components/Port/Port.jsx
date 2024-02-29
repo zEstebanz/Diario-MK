@@ -19,7 +19,7 @@ function Port() {
                             <IoSkullOutline className="text-3xl text-white font-bold hover:text-blue-500 transition duration-300" />
                         </a>
 
-                        <a href="URL_DE_INSTAGRAM" target="_blank" rel="noopener noreferrer">
+                        <a href="https://fav-page-one.vercel.app/" target="_blank" rel="noopener noreferrer">
                             <FaRegStar className="text-3xl text-white font-bold hover:text-green-800 transition duration-300" />
                         </a>
                     </div>
@@ -36,22 +36,7 @@ function Port() {
                 </div>
             </div>
         </section>
-
     )
 }
 
 export default Port
-
-
-// <div className="flex items-center absolute top-0 right-0">
-// <Link className="icon-port" href="/ejercicios">
-//     <p className="mr-4">
-//         <SiExercism className="text-6xl md:text-8xl" />
-//     </p>
-// </Link>
-// <Link className="icon-port" href="/newshack">
-//     <p>
-//         <IoSkullOutline className="text-6xl md:text-8xl" />
-//     </p>
-// </Link>
-// </div>

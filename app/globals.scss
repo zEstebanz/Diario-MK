@@ -66,10 +66,7 @@ $font-diario: 'Bebas Neue', sans-serif;
 
 /*Section port*/
 .section-port {
-  background-image:
-    radial-gradient(circle at 20% 50%, #145E70, transparent 60%),
-    radial-gradient(circle at 80% 20%, #38b388, transparent 60%),
-    linear-gradient(45deg, #ffffff, #178a71);
+  background-image: url('../public/img/kali-bg.png');
   background-size: 100% 100%;
   background-blend-mode: overlay;
   padding-top: 100px;
@@ -144,7 +141,7 @@ $font-diario: 'Bebas Neue', sans-serif;
 /*Section Blog*/
 .section-blog {
   padding-top: 80px;
-  background-color: linear-gradient( #ffffff, #178a71);
+  background-color: #22242d;
   background-size: cover;
 
   .post-preview:hover {

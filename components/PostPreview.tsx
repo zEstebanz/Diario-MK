@@ -19,7 +19,7 @@ const PostPreview = (props: PostMetadata) => {
   };
 
   return (
-    <div className="border border-slate-400 p-4 rounded-md shadow-sm bg-white post-preview relative article-box">
+    <div className="border border-slate-400 p-4 rounded-md shadow-sm bg-[#A9ACA9] post-preview relative article-box">
       <p className="text-sm text-slate-600">{props.date}</p>
 
       <div className="flex justify-between items-center mb-4">

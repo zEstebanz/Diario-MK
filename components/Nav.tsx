@@ -7,7 +7,6 @@ const navLinks = [
     { title: "Home", path: "/" },
     { title: "Ejercicios", path: "/ejercicios" },
     { title: "NewsHack", path: "/newshack" },
-
 ];
 
 const Navbar = () => {
