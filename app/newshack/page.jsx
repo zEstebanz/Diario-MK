@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import angoliaApi from '../utils/services/axiosConfig'
 
 function Page() {
   const [news, setNews] = useState([]);
@@ -7,8 +8,8 @@ function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://hn.algolia.com/api/v1/search?tags=front_page');
-        const data = await response.json();
+        const response = await angoliaApi.get();
+        const data = response.data;
         setNews(data.hits);
         console.log(data);
       } catch (error) {
@@ -33,7 +34,7 @@ function Page() {
             {item.image && <img src={item.image} alt={item.title} className="w-full h-32 object-cover mb-4" />}
             <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline block">Read more</a>
           </div>
-          
+
         ))}
       </div>
     </section>
