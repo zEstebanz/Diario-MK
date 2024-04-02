@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hidden {
+  display: none;
+}
+
+.imgMarkdown {
+  width: 100%;
+  height: 350px;
+  /* Establecer el ajuste de la imagen */
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 20px black;
+}
+
+.mongo {
+  background-color: aqua;
+  color: black;
+  font-weight: 600;
+}
+
+.has-line-data {
+  background-color: black;
+}
+
+/*Globales*/
+.currentColor {
+  background-color: white;
+}
+
+.nav-bar {
+  background-color: rgba(0, 0, 0, 0.829);
+}
+.nav-bar .title-nav {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+}
+.nav-bar .text-nav-link {
+  color: white;
+}
+.nav-bar .text-nav-link:hover {
+  color: #145e70;
+  transition: 0.5s;
+}
+.nav-bar .text-nav-link:not(:hover) {
+  color: white;
+  transition: 0.5s;
+}
+
+/*Section port*/
+.section-port {
+  background-image: url("../public/img/kali-bg.png");
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
+  padding-top: 100px;
+  background-size: cover;
+}
+.section-port .port {
+  background-color: rgba(0, 0, 0, 0.76);
+  height: 80vh;
+  margin: 0 5%;
+}
+@media (max-width: 667px) {
+  .section-port .port {
+    height: 70vh;
+  }
+}
+.section-port .port .title-port {
+  color: white;
+  padding-top: 100px;
+  padding-left: 5%;
+  font-family: "Bebas Neue", sans-serif;
+}
+.section-port .port .subtitle {
+  color: white;
+  padding-left: 5%;
+  font-weight: 600;
+  font-family: "Bebas Neue", sans-serif;
+}
+.section-port .port hr {
+  margin-right: 0 25%;
+  border: 2px solid #050505;
+}
+.section-port .port .icon-down {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+}
+@media (max-width: 375) {
+  .section-port .port .icon-down {
+    left: 50%;
+    top: 60%;
+  }
+}
+.section-port .port .icon-down:hover {
+  color: #145e70;
+  transition: 0.5s;
+}
+.section-port .port .icon-down:not(:hover) {
+  color: white;
+  transition: 0.5s;
+}
+.section-port .icon-port:hover {
+  color: #145e70;
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+.section-port .icon-port:not(:hover) {
+  transition: 0.5s;
+}
+
+/*End Section port*/
+/*Section Blog*/
+.section-blog {
+  padding-top: 80px;
+  background-color: #22242d;
+  background-size: cover;
+}
+.section-blog .post-preview:hover {
+  transition: transform 0.4s ease-in-out;
+  transform: scale(1.05);
+}
+.section-blog .post-preview:hover h2 {
+  text-decoration: underline;
+}
+.section-blog .post-preview:not(:hover) {
+  transition: transform 0.2s ease-in-out;
+  transition: 0.5s;
+}
+
+/*EndSection Blog*/
+/*Section Post*/
+.section-posts {
+  padding-top: 50px;
+}
+.section-posts .sidebar {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/*End Section Post*/
+/* Section NewsHack*/
+.section-newshack {
+  background-color: #000000;
+}
+.section-newshack .port {
+  background-image: url("../public/img/skull.jpeg");
+  height: 150px;
+}
+.section-newshack .port .title {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* End Section NewsHack*/
+/*Footer*/
+.text-footer-link {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/*End Footer*/
+.absolute-menu {
+  z-index: 10;
+  /* Ajusta este valor según sea necesario para asegurarte de que el menú desplegable esté por encima de otros elementos */
+}
+
+.article-box .img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=globals.css.map */

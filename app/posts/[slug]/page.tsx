@@ -32,7 +32,7 @@ const PostPage = (props: any) => {
     ));
 
     return (
-        <main className="section-posts bg-white dark:bg-gray-900 flex flex-col md:flex-row">
+        <main className="section-posts bg-white dark:bg-[#000] flex flex-col md:flex-row">
             <div className="h-auto min-h-screen md:w-3/4">
 
                 <div className="pt-6">
@@ -128,7 +128,8 @@ const PostPage = (props: any) => {
             <ChangeTheme />
 
 
-            <aside className="w-full md:w-1/4 p-4 bg-gray-800 dark:bg-gray-700 md:bg-transparent text-black dark:text-white sidebar">
+            <aside className="w-full md:w-1/4 p-4 dark:bg-[#111] text-black
+            bg-gray-100 dark:text-white sidebar">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold">Más Posts</h2>
                 </div>

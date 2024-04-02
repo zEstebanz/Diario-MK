@@ -19,7 +19,7 @@ const SidebarPreview = (props: PostMetadata) => {
     };
 
     return (
-        <div className="border border-gray-300 p-4 rounded-md shadow-sm bg-gray-100 dark:bg-gray-700 post-preview relative article-box mb-4">
+        <div className="border border-gray-300 dark:border-none p-4 rounded-md shadow-sm bg-gray-300 dark:bg-[#222] post-preview relative article-box mb-4">
         <p className="text-sm text-gray-600 dark:text-gray-300">{props.date}</p>
     
         <div className="flex justify-between items-center mb-4">
