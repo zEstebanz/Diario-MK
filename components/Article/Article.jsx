@@ -12,13 +12,14 @@ function Article() {
     return (
         <section className="section-blog" id="blog">
             <div className='p-8'>
-                <div className="container">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 p-8">
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {postPreviews}
                     </div>
                 </div>
             </div>
         </section>
+
     )
 }
 
