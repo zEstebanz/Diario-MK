@@ -1,8 +1,7 @@
 "use client"
 import React from 'react'
 import { useEffect, useState } from 'react';
-import { CgDarkMode } from "react-icons/cg";
-
+import { MdLightMode } from "react-icons/md";
 function ChangeTheme() {
 
     const [theme, setTheme] = useState("light")
@@ -27,7 +26,7 @@ function ChangeTheme() {
                 className="text-4xl text-black dark:text-white"
                 onClick={handleChangeTheme}
             >
-                <CgDarkMode />
+                <MdLightMode />
             </button>
         </div>
     )
