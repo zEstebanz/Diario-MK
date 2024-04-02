@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import ChangeTheme from "./UI/ChangeTheme";
 
 const navLinks = [
     { title: "Home", path: "/" },
@@ -22,6 +23,7 @@ const Navbar = () => {
                         </h1>
                     </div>
                 </Link>
+                
 
                 <div className="mobile-menu block">
                     <button
