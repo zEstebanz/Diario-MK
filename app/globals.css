@@ -43,7 +43,7 @@
   color: white;
 }
 .nav-bar .text-nav-link:hover {
-  color: #145e70;
+  color: rgb(6, 182, 212);
   transition: 0.5s;
 }
 .nav-bar .text-nav-link:not(:hover) {
@@ -99,7 +99,7 @@
   }
 }
 .section-port .port .icon-down:hover {
-  color: #145e70;
+  color: rgb(6, 182, 212);
   transition: 0.5s;
 }
 .section-port .port .icon-down:not(:hover) {
@@ -107,7 +107,7 @@
   transition: 0.5s;
 }
 .section-port .icon-port:hover {
-  color: #145e70;
+  color: rgb(6, 182, 212);
   transition: 0.5s;
   transform: scale(1.5);
 }
