@@ -8,7 +8,7 @@ function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await angoliaApi.get();
+        const response = await angoliaApi.get('search?tags=front_page');
         const data = response.data;
         setNews(data.hits);
         console.log(data);

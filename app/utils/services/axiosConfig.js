@@ -2,7 +2,7 @@ import axios from"axios";
 import { API } from"./constants";
 
 const angoliaApi = axios.create({
-    baseURL: API,
+    baseURL: 'https://hn.algolia.com/api/v1/',  // Asegúrate de usar HTTPS
 });
 
 export default angoliaApi;
