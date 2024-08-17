@@ -29,15 +29,19 @@ function Page() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-[5%]">
         {news.map(item => (
-          <div key={item.objectID} className="news-item border border-gray-400 rounded-md p-4 bg-white shadow-md">
-            <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-black font-bold mb-4 block">{item.title}</a>
+          <div key={item.objectID} className="news-item border border-gray-400 rounded-md p-4 bg-white shadow-md"><a href={item.url} target="_blank" rel="noopener noreferrer" className="text-black font-bold mb-4 block">
+            {item.title}
+          </a>
             {item.image && <img src={item.image} alt={item.title} className="w-full h-32 object-cover mb-4" />}
-            <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline block">Read more</a>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline block">
+              Read more
+            </a>
           </div>
+        ))
+        }
+      </div >
 
-        ))}
-      </div>
-    </section>
+    </section >
 
   );
 }
