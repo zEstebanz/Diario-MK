@@ -9,7 +9,7 @@ function Port() {
         <section className="section-port h-auto min-h-screen relative">
             <div className="port relative">
                 <div>
-                    <h1 className="title-port font-bold text-6xl md:text-8xl">Diario-MK</h1>
+                    <h1 className="title-port font-bold text-6xl md:text-8xl">dev-test</h1>
                     <p className="subtitle text-xl md:text-2xl">blog personal...</p>
                 </div>
 

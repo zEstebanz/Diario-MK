@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <Link href="/">
                         <div className="flex items-center cursor-pointer">
-                            <p className="text-3xl font-bold text-white text-footer-link  hover:text-cyan-500 transition-colors duration-500">Diario-MK</p>
+                            <p className="text-3xl font-bold text-white text-footer-link  hover:text-cyan-500 transition-colors duration-500">dev-test</p>
                         </div>
                     </Link>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-gray-400">

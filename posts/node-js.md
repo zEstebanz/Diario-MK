@@ -1,7 +1,7 @@
 ---
 title: "Node.js desde Cero"
 date: "06-01-2024"
-img: "https://zestebanz.github.io/my-gallery/public/img/diario-mk/node/node.jpg"
+img: "https://zestebanz.github.io/my-gallery/public/img/dev-test/node/node.jpg"
 subtitle: "Esteban Oller"
 ---
 

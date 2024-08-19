@@ -1,7 +1,7 @@
 ---
 title: "MariaDB en Termux"
 date: "19-05-2024"
-img: "https://raw.githubusercontent.com/zEstebanz/Diario-MK/455cb45e40b58f63bb6b85e8a7338690a9c99d2a/public/img/mariadb-en-termux/port.png"
+img: "https://raw.githubusercontent.com/zEstebanz/dev-test/455cb45e40b58f63bb6b85e8a7338690a9c99d2a/public/img/mariadb-en-termux/port.png"
 subtitle: "Esteban Oller"
 ---
 

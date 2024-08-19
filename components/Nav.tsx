@@ -19,7 +19,7 @@ const Navbar = () => {
                 <Link href="/" className="text-3xl md:text-3xl text-white font-semibold">
                     <div className="flex items-center cursor-pointer">
                         <h1 className="text-white">
-                            <span className="title-nav text-nav-link">Diario-MK</span>
+                            <span className="title-nav text-nav-link">dev-test</span>
                         </h1>
                     </div>
                 </Link>

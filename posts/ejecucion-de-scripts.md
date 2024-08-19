@@ -10,7 +10,7 @@ subtitle: "Esteban Oller"
 Este documento proporciona instrucciones paso a paso para habilitar la ejecución de scripts en PowerShell en Visual Studio Code. La ejecución de scripts puede estar deshabilitada por razones de seguridad, y estos pasos aseguran que se pueda realizar la ejecución sin comprometer la seguridad del sistema.
 
 ##Error:
-![Error](https://zestebanz.github.io/my-gallery/public/img/diario-mk/Ejecucion%20de%20Scripts/error.png)
+![Error](https://zestebanz.github.io/my-gallery/public/img/dev-test/Ejecucion%20de%20Scripts/error.png)
 
 ## Pasos para Habilitar la Ejecución de Scripts en PowerShell
 
@@ -32,7 +32,7 @@ Set-ExecutionPolicy RemoteSigned -Force
 
 Esto establecerá la política de ejecución en "RemoteSigned," permitiendo la ejecución de scripts locales firmados digitalmente y scripts remotos sin firmar.
 
-![PowerShell](https://zestebanz.github.io/my-gallery/public/img/diario-mk/Ejecucion%20de%20Scripts/powershell-comandos.png)
+![PowerShell](https://zestebanz.github.io/my-gallery/public/img/dev-test/Ejecucion%20de%20Scripts/powershell-comandos.png)
 
 ### 3. Habilitar Machine Policy
 
@@ -46,7 +46,7 @@ Para habilitar la Directiva de Máquina (Machine Policy), siga estos pasos:
 
 #### Cuadro de dialogo:
 
-![cuadro de dialogo](https://zestebanz.github.io/my-gallery/public/img/diario-mk/Ejecucion%20de%20Scripts/cuadro-dialogo.png)
+![cuadro de dialogo](https://zestebanz.github.io/my-gallery/public/img/dev-test/Ejecucion%20de%20Scripts/cuadro-dialogo.png)
 
 ### 4. Configuración de Directiva de Máquina
 
@@ -61,11 +61,11 @@ Busque la opción "Configuración de Directiva de Máquina: Modo de Autenticaci�
 
 #### Ventana gpedit.msc:
 
-![Venta gpedit.msc](https://zestebanz.github.io/my-gallery/public/img/diario-mk/Ejecucion%20de%20Scripts/config.png)
+![Venta gpedit.msc](https://zestebanz.github.io/my-gallery/public/img/dev-test/Ejecucion%20de%20Scripts/config.png)
 
 #### Venta configuracón:
 
-![ventana configuración](https://zestebanz.github.io/my-gallery/public/img/diario-mk/Ejecucion%20de%20Scripts/config2.png)
+![ventana configuración](https://zestebanz.github.io/my-gallery/public/img/dev-test/Ejecucion%20de%20Scripts/config2.png)
 
 ## Conclusión
 

@@ -1,5 +1,5 @@
 ---
-title: "Documentación Diario-MK"
+title: "Documentación dev-test"
 subtitle: "Esteban Oller"
 date: "10-01-2023"
 img: "https://zestebanz.github.io/my-gallery/public/img/projectos/12.png    "
@@ -7,7 +7,7 @@ img: "https://zestebanz.github.io/my-gallery/public/img/projectos/12.png    "
 
 ##Introducción
 
-El proyecto "diario-mk" es una aplicación basada en Next.js que permite crear y gestionar un diario personal utilizando el formato Markdown para la escritura de entradas. Esta documentación proporciona información detallada sobre el propósito, la funcionalidad y las tecnologías utilizadas en el desarrollo del proyecto.
+El proyecto "dev-test" es una aplicación basada en Next.js que permite crear y gestionar un diario personal utilizando el formato Markdown para la escritura de entradas. Esta documentación proporciona información detallada sobre el propósito, la funcionalidad y las tecnologías utilizadas en el desarrollo del proyecto.
 
 ##Tecnologías Utilizadas
 El proyecto se ha desarrollado utilizando las siguientes tecnologías:
@@ -22,8 +22,8 @@ A continuación se detallan los pasos para instalar y configurar el proyecto en 
 1. Clonar el Repositorio:
 
 ```
-https://github.com/zEstebanz/Diario-MK.git
-cd diario-mk
+https://github.com/zEstebanz/dev-test.git
+cd dev-test
 ```
 
 2.Instalar Dependencias:
