@@ -2,12 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { MdLightMode } from "react-icons/md";
+import ChangeTheme from "./UI/ChangeTheme";
 import { FaHome } from "react-icons/fa";
 import { IoSkullOutline } from "react-icons/io5";
 import { SiExercism } from "react-icons/si";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+// Opciones del menú como un array de objetos
 const menuItems = [
   {
     label: "Inicio",
@@ -34,37 +35,6 @@ const menuItems = [
     },
   },
 ];
-
-const ChangeTheme = () => {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    setTheme(savedTheme);
-    if (savedTheme === 'dark') {
-      document.querySelector('html')?.classList.add('dark');
-    } else {
-      document.querySelector('html')?.classList.remove('dark');
-    }
-  }, []);
-
-  const handleChangeTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.querySelector('html')?.classList.toggle('dark', newTheme === 'dark');
-  };
-
-  return (
-    <button
-      className="text-3xl text-white dark:text-yellow-500"
-      onClick={handleChangeTheme}
-      title="Toggle Theme"
-    >
-      <MdLightMode />
-    </button>
-  );
-};
 
 const Topbar = () => {
   const [isMounted, setIsMounted] = useState(false);

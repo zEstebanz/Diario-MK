@@ -19,7 +19,6 @@ function Article() {
                 </div>
             </div>
         </section>
-
     )
 }
 

@@ -3,9 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { IoEllipsisVerticalOutline } from 'react-icons/io5';
 import { FaComments, FaHeart } from 'react-icons/fa';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
-// Definición de las propiedades esperadas en el componente
 interface PostMetadata {
   slug: string;
   title: string;
@@ -17,28 +16,46 @@ interface PostMetadata {
 
 const PostPreview: React.FC<PostMetadata> = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const handleShare = (): void => {
+    const shareUrl = `${window.location.origin}/posts/${props.slug}`;
+    
     if (navigator.share) {
       navigator.share({
         title: props.title,
-        url: window.location.href + `/posts/${props.slug}`,
+        url: shareUrl,
       }).then(() => {
-        console.log('Article shared successfully');
+        console.log('Artículo compartido exitosamente');
       }).catch((error) => {
-        console.error('Error sharing the article', error);
+        console.error('Error al compartir el artículo', error);
       });
     } else {
-      const shareUrl = window.location.href + `/posts/${props.slug}`;
       navigator.clipboard.writeText(shareUrl).then(() => {
         alert('Enlace copiado al portapapeles');
+      }).catch((error) => {
+        console.error('Error al copiar el enlace al portapapeles', error);
       });
     }
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="border border-slate-400 p-4 rounded-md shadow-sm bg-[#F0F1F2] post-preview relative article-box hover:shadow-md transition-shadow duration-300">
@@ -50,7 +67,7 @@ const PostPreview: React.FC<PostMetadata> = (props) => {
             {props.title}
           </h2>
         </Link>
-        <div className="relative">
+        <div className="relative" ref={menuRef}>
           <IoEllipsisVerticalOutline
             className="text-gray-600 cursor-pointer hover:text-gray-800 transition-colors duration-200"
             onClick={toggleMenu}

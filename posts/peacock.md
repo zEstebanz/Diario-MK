@@ -2,7 +2,7 @@
 title: "Ventanas de colores VSCODE"
 date: "06-01-2024"
 subtitle: "Esteban Oller"
-img: "https://zestebanz.github.io/my-gallery/public/img/dev-test/peacock/4.jpg"
+img: "https://zestebanz.github.io/my-gallery/public/img/diario-mk/peacock/4.jpg"
 ---
 
 ## Peacock, Que es?
